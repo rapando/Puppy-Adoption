@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Did a puppy get adopted?</h1>
+    <p>If so, please fill out their id to remove them from the database</p>
+</div>
+{% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST" action="">
+                <div class="jumbotron">
+                        <div class="form-group">
+                                {{render_field(form.name, class_="form-control")}}
+                            </div> 
+                            <p><input type="submit" class="btn btn-primary" value="Remove!"></p>
+
+                </div>
+        </form>
+
+{% endblock %}
+
