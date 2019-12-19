@@ -88,8 +88,9 @@ def del_pup():
     if request.method == 'POST' and form.validate():
 
         name = form.name.data
+        id = form.id.data
 
-        pup = Puppy.query.filter_by(name='pup').first()
+        pup = Puppy.query.filter_by(id=id)
         db.session.delete(pup)
         db.session.commit()
 
